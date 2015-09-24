@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 // Max migration from Borland Studio 2015-09-23
 
-    // changed line
+    // to pulish to master-test1 branch
 
 namespace Life
 {
