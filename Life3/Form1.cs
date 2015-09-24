@@ -377,9 +377,9 @@ namespace Life
             int x = XToCellx(X);
             int y = YToCelly(Y);
             MatrixT[x, y] = Matrix[x, y]; ;
-            Matrix[x, y] = 1 - Matrix[x, y];
-            if (Matrix[x, y] == 1) PopulationCount++;
-            else PopulationCount--;
+            Matrix[x, y] = 1; // to invert, use 1 - Matrix[x, y];
+            if (MatrixT[x, y] != 1) PopulationCount++; else return;
+            // else PopulationCount--;
             PopulationCounter.Text = (PopulationCount).ToString();
             PopulationCounter.Update();
 
@@ -404,7 +404,7 @@ namespace Life
                 case MouseButtons.None: default: break;
             }
 
-            if (eventString == "L")
+            if ( (eventString == "L") && (LastXMouse != e.X || LastYMouse != e.Y))
                 if ((e.X < myPanel.Width) && (e.Y < myPanel.Height))
                 {
                     Change_GridXY(e.X, e.Y);
