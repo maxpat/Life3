@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 // Max migration from Borland Studio 2015-09-23
 
+    // change to test GIT update
+
 namespace Life
 {
     public partial class Form1 : Form
